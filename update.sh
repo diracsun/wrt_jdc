@@ -287,7 +287,9 @@ update_default_lan_addr() {
     local CFG_PATH="$BUILD_DIR/package/base-files/files/bin/config_generate"
     if [ -f $CFG_PATH ]; then
         sed -i 's/192\.168\.[0-9]*\.[0-9]*/'$LAN_ADDR'/g' $CFG_PATH
+	 	sed -i "s/hostname='.*'/hostname='Dirac'/g" $CFG_PATH
     fi
+	sed -i "s/(\(luciversion || ''\))/(\1) + (' \/ Built by Roc')/g" "$BUILD_DIR/feeds/luci/modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js"
 }
 
 remove_something_nss_kmod() {

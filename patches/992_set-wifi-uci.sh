@@ -56,8 +56,8 @@ aliyun_ap8220_wifi_cfg() {
 }
 
 cmcc_rax3000m_wifi_cfg() {
-	configure_wifi 0 1 HE20 23 'CMCC_RAX3000M' '12345678'
-	configure_wifi 1 44 HE160 25 'CMCC_RAX3000M_5G' '12345678'
+	configure_wifi 0 1 HE20 23 'Kwrt' 'tdcc=10-10'
+	configure_wifi 1 44 HE160 25 'Kwrt' 'tdcc=10-10'
 }
 
 redmi_ax6_wifi_cfg() {
